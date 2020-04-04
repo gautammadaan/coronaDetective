@@ -9,15 +9,28 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Initialize PPKController
+        PPKController.enable(withConfiguration: "72b9e4db88ac42dab46ff9528b15eb5a", observer: self)
         return true
     }
+    
+    func ppkControllerInitialized() {
+        PPKController.startDiscovery(withDiscoveryInfo: "Nikita".data(using: .utf8), stateRestoration: false)
+    }
 
+    func peerDiscovered(_ peer: PPKPeer) {
+        print(peer.proximityStrength, "haha");
+        if let discoveryInfo = peer.discoveryInfo {
+            let discoveryInfoString = String(data: discoveryInfo, encoding: .utf8)
+            print("\(peer.peerID) is here with discovery info: \(discoveryInfoString ?? "test")")
+        }
+    }
+    
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

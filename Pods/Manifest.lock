@@ -1,0 +1,16 @@
+PODS:
+  - p2pkit (2.1.0)
+
+DEPENDENCIES:
+  - p2pkit
+
+SPEC REPOS:
+  trunk:
+    - p2pkit
+
+SPEC CHECKSUMS:
+  p2pkit: 3c42f139e7d523fc870d791ba963dab69f79688a
+
+PODFILE CHECKSUM: cb5a35bd4c684c10b2c256696eec92183b597cbe
+
+COCOAPODS: 1.9.1

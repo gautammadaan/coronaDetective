@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		162A06E2ECADBC642BB77827 /* libPods-CoronaDetective.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 219F8ABC8AFC98D7FA52D94C /* libPods-CoronaDetective.a */; };
+		414EE6832439303F00230F8E /* P2PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE6822439303F00230F8E /* P2PKit.framework */; };
+		414EE6852439305600230F8E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE6842439305600230F8E /* CoreBluetooth.framework */; };
+		414EE6872439306300230F8E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE6862439306300230F8E /* libicucore.tbd */; };
+		414EE6892439306C00230F8E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE6882439306B00230F8E /* CFNetwork.framework */; };
+		414EE68B2439307300230F8E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE68A2439307300230F8E /* Security.framework */; };
+		414EE68D2439307A00230F8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE68C2439307A00230F8E /* Foundation.framework */; };
 		41B698E0243462D2004A2BF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B698DF243462D2004A2BF8 /* AppDelegate.swift */; };
 		41B698E2243462D2004A2BF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B698E1243462D2004A2BF8 /* SceneDelegate.swift */; };
 		41B698E4243462D2004A2BF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B698E3243462D2004A2BF8 /* ContentView.swift */; };
@@ -35,6 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		175FF563401E897E6E069B60 /* Pods-CoronaDetective.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaDetective.debug.xcconfig"; path = "Target Support Files/Pods-CoronaDetective/Pods-CoronaDetective.debug.xcconfig"; sourceTree = "<group>"; };
+		219F8ABC8AFC98D7FA52D94C /* libPods-CoronaDetective.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoronaDetective.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		414EE67D24391CBC00230F8E /* CoronaDetective-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoronaDetective-Bridging-Header.h"; sourceTree = "<group>"; };
+		414EE6822439303F00230F8E /* P2PKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = P2PKit.framework; path = Pods/p2pkit/iOS/P2PKit.framework; sourceTree = "<group>"; };
+		414EE6842439305600230F8E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		414EE6862439306300230F8E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		414EE6882439306B00230F8E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		414EE68A2439307300230F8E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		414EE68C2439307A00230F8E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		41B698DC243462D2004A2BF8 /* CoronaDetective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoronaDetective.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B698DF243462D2004A2BF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41B698E1243462D2004A2BF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 		41B698FD243462D7004A2BF8 /* CoronaDetectiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoronaDetectiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B69901243462D7004A2BF8 /* CoronaDetectiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaDetectiveUITests.swift; sourceTree = "<group>"; };
 		41B69903243462D7004A2BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78B1152446499D76FFFE1B05 /* Pods-CoronaDetective.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaDetective.release.xcconfig"; path = "Target Support Files/Pods-CoronaDetective/Pods-CoronaDetective.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414EE68D2439307A00230F8E /* Foundation.framework in Frameworks */,
+				414EE68B2439307300230F8E /* Security.framework in Frameworks */,
+				414EE6892439306C00230F8E /* CFNetwork.framework in Frameworks */,
+				414EE6872439306300230F8E /* libicucore.tbd in Frameworks */,
+				414EE6852439305600230F8E /* CoreBluetooth.framework in Frameworks */,
+				414EE6832439303F00230F8E /* P2PKit.framework in Frameworks */,
+				162A06E2ECADBC642BB77827 /* libPods-CoronaDetective.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		335937B359553C07F995B022 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				175FF563401E897E6E069B60 /* Pods-CoronaDetective.debug.xcconfig */,
+				78B1152446499D76FFFE1B05 /* Pods-CoronaDetective.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		41B698D3243462D2004A2BF8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +116,8 @@
 				41B698F5243462D7004A2BF8 /* CoronaDetectiveTests */,
 				41B69900243462D7004A2BF8 /* CoronaDetectiveUITests */,
 				41B698DD243462D2004A2BF8 /* Products */,
+				335937B359553C07F995B022 /* Pods */,
+				6EC1FEEC00D703152F9F3090 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +141,7 @@
 				41B698EA243462D7004A2BF8 /* LaunchScreen.storyboard */,
 				41B698ED243462D7004A2BF8 /* Info.plist */,
 				41B698E7243462D7004A2BF8 /* Preview Content */,
+				414EE67D24391CBC00230F8E /* CoronaDetective-Bridging-Header.h */,
 			);
 			path = CoronaDetective;
 			sourceTree = "<group>";
@@ -136,6 +172,20 @@
 			path = CoronaDetectiveUITests;
 			sourceTree = "<group>";
 		};
+		6EC1FEEC00D703152F9F3090 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				414EE68C2439307A00230F8E /* Foundation.framework */,
+				414EE68A2439307300230F8E /* Security.framework */,
+				414EE6882439306B00230F8E /* CFNetwork.framework */,
+				414EE6862439306300230F8E /* libicucore.tbd */,
+				414EE6842439305600230F8E /* CoreBluetooth.framework */,
+				414EE6822439303F00230F8E /* P2PKit.framework */,
+				219F8ABC8AFC98D7FA52D94C /* libPods-CoronaDetective.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41B69906243462D7004A2BF8 /* Build configuration list for PBXNativeTarget "CoronaDetective" */;
 			buildPhases = (
+				067E7BDAC7CBD7A24E11601D /* [CP] Check Pods Manifest.lock */,
 				41B698D8243462D2004A2BF8 /* Sources */,
 				41B698D9243462D2004A2BF8 /* Frameworks */,
 				41B698DA243462D2004A2BF8 /* Resources */,
@@ -262,6 +313,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		067E7BDAC7CBD7A24E11601D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoronaDetective-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41B698D8243462D2004A2BF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -372,6 +448,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -425,6 +502,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -432,12 +510,20 @@
 		};
 		41B69907243462D7004A2BF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 175FF563401E897E6E069B60 /* Pods-CoronaDetective.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"CoronaDetective/Preview Content\"";
 				DEVELOPMENT_TEAM = QV2APKFD6U;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/p2pkit/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 				INFOPLIST_FILE = CoronaDetective/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,12 +538,20 @@
 		};
 		41B69908243462D7004A2BF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78B1152446499D76FFFE1B05 /* Pods-CoronaDetective.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"CoronaDetective/Preview Content\"";
 				DEVELOPMENT_TEAM = QV2APKFD6U;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/p2pkit/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 				INFOPLIST_FILE = CoronaDetective/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
