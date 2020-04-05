@@ -14,6 +14,7 @@
 		414EE6892439306C00230F8E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE6882439306B00230F8E /* CFNetwork.framework */; };
 		414EE68B2439307300230F8E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE68A2439307300230F8E /* Security.framework */; };
 		414EE68D2439307A00230F8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE68C2439307A00230F8E /* Foundation.framework */; };
+		414EE695243A085000230F8E /* libAlamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 414EE694243A085000230F8E /* libAlamofire.a */; };
 		41B698E0243462D2004A2BF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B698DF243462D2004A2BF8 /* AppDelegate.swift */; };
 		41B698E2243462D2004A2BF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B698E1243462D2004A2BF8 /* SceneDelegate.swift */; };
 		41B698E4243462D2004A2BF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B698E3243462D2004A2BF8 /* ContentView.swift */; };
@@ -51,6 +52,7 @@
 		414EE6882439306B00230F8E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		414EE68A2439307300230F8E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		414EE68C2439307A00230F8E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		414EE694243A085000230F8E /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B698DC243462D2004A2BF8 /* CoronaDetective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoronaDetective.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B698DF243462D2004A2BF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41B698E1243462D2004A2BF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				414EE68B2439307300230F8E /* Security.framework in Frameworks */,
 				414EE6892439306C00230F8E /* CFNetwork.framework in Frameworks */,
 				414EE6872439306300230F8E /* libicucore.tbd in Frameworks */,
+				414EE695243A085000230F8E /* libAlamofire.a in Frameworks */,
 				414EE6852439305600230F8E /* CoreBluetooth.framework in Frameworks */,
 				414EE6832439303F00230F8E /* P2PKit.framework in Frameworks */,
 				162A06E2ECADBC642BB77827 /* libPods-CoronaDetective.a in Frameworks */,
@@ -175,6 +178,7 @@
 		6EC1FEEC00D703152F9F3090 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				414EE694243A085000230F8E /* libAlamofire.a */,
 				414EE68C2439307A00230F8E /* Foundation.framework */,
 				414EE68A2439307300230F8E /* Security.framework */,
 				414EE6882439306B00230F8E /* CFNetwork.framework */,

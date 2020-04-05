@@ -1,16 +1,20 @@
 PODS:
+  - Alamofire (5.1.0)
   - p2pkit (2.1.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.1)
   - p2pkit
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - p2pkit
 
 SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   p2pkit: 3c42f139e7d523fc870d791ba963dab69f79688a
 
-PODFILE CHECKSUM: cb5a35bd4c684c10b2c256696eec92183b597cbe
+PODFILE CHECKSUM: f2653349d138d378ed0531e119ae18314f8a93c6
 
 COCOAPODS: 1.9.1

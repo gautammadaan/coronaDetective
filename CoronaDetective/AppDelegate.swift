@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
-    
+    let gautam = "4083688895";
+    let nikita = "4082034274";
     var mapDeviceToTimeStrongStrength = [String: Date]();
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -22,8 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
     }
     
     func ppkControllerInitialized() {
-//        let gautam = "4083688895";
-        let nikita = "4082034274";
         // State restoration = true, makes devices discoverable even when the app crashes or is termintaed by OS
         PPKController.startDiscovery(withDiscoveryInfo: nikita.data(using: .utf8), stateRestoration: true)
     }
@@ -43,20 +43,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
         
         let proximityStrengthValue = peer.proximityStrength.rawValue;
         let discoveryInfoString = self.getDiscoveryInfo(for: peer);
-        if (peer.proximityStrength.rawValue < PPKProximityStrength.strong.rawValue) {
-            let timeStrongStrength = mapDeviceToTimeStrongStrength[discoveryInfoString];
+        let timeStrongStrength = mapDeviceToTimeStrongStrength[discoveryInfoString];
+        if (proximityStrengthValue < PPKProximityStrength.strong.rawValue) {
+            print(proximityStrengthValue, PPKProximityStrength.strong.rawValue)
+            if timeStrongStrength != nil {
+                print(timeStrongStrength?.timeIntervalSinceNow as Any);
+                if abs(timeStrongStrength?.timeIntervalSinceNow ?? Double(0)) >= Double(10) {
+                    var parameters = [String: String]();
+                    parameters["source"] = nikita;
+                    parameters["destination"] = "9810190852";
+                    AF.request("https://InfatuatedRevolvingFacts--gautim26.repl.co", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default).responseJSON(completionHandler: { response in print(response)})
+                    print("Available for more than 10 seconds");
+                }
+                mapDeviceToTimeStrongStrength.removeValue(forKey: discoveryInfoString);
+                print(mapDeviceToTimeStrongStrength, "Device removed from tagging");
             
-            
-        }
-
-        
-        if timeDiscovered != nil {
-            if timeDiscovered?.timeIntervalSinceNow ?? Double(0) >= Double(10) {
-                print(discoveryInfoString, "Available for more than 10 seconds");
-            } else {
-                print(discoveryInfoString, "Available for less than 10 seconds");
             }
-            mapDeviceToTimeStrongStrength.removeValue(forKey: discoveryInfoString);
+        } else if proximityStrengthValue >= PPKProximityStrength.strong.rawValue {
+            if (timeStrongStrength == nil) {
+                mapDeviceToTimeStrongStrength[discoveryInfoString] = Date.init();
+                print( mapDeviceToTimeStrongStrength, "Device in range after reset");
+            }
         }
     }
     
@@ -80,7 +87,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
         if (discoveryInfoString != "") {
             print("\(peer.peerID) is here with discovery info: \(discoveryInfoString )")
             if peer.proximityStrength.rawValue >= PPKProximityStrength.strong.rawValue {
-                
                 mapDeviceToTimeStrongStrength[discoveryInfoString] = Date.init();
                 print(mapDeviceToTimeStrongStrength);
             }

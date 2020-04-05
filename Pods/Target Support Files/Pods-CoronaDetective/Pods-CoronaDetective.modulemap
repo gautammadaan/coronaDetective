@@ -1,0 +1,6 @@
+module Pods_CoronaDetective {
+  umbrella header "Pods-CoronaDetective-umbrella.h"
+
+  export *
+  module * { export * }
+}
