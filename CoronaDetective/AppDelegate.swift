@@ -10,23 +10,80 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
-
+    
+    var mapDeviceToTimeStrongStrength = [String: Date]();
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Initialize PPKController
         PPKController.enable(withConfiguration: "72b9e4db88ac42dab46ff9528b15eb5a", observer: self)
+        PPKController.enableProximityRanging();
         return true
     }
     
     func ppkControllerInitialized() {
-        PPKController.startDiscovery(withDiscoveryInfo: "Nikita".data(using: .utf8), stateRestoration: false)
+//        let gautam = "4083688895";
+        let nikita = "4082034274";
+        // State restoration = true, makes devices discoverable even when the app crashes or is termintaed by OS
+        PPKController.startDiscovery(withDiscoveryInfo: nikita.data(using: .utf8), stateRestoration: true)
+    }
+    /**
+            Is called when prozimity strength is changed
+     http://p2pkit.io/api/v2/ios/Constants/PPKProximityStrength.html for ranges
+     */
+    func proximityStrengthChanged(for peer: PPKPeer) {
+        // On signal strength change
+        // if signal drops below strong
+//           - if the time elapsed since it was strong has been 10 seconds. write the data and remove from dictionary
+        //   - If time elapsed since it was storing is less than 10 seconds, remove from dictionary
+        
+        // if proximity changes to strong or immediate
+//          - if a time stamp is found do nothing
+//          - if timestamp is not found, start the process again
+        
+        let proximityStrengthValue = peer.proximityStrength.rawValue;
+        let discoveryInfoString = self.getDiscoveryInfo(for: peer);
+        if (peer.proximityStrength.rawValue < PPKProximityStrength.strong.rawValue) {
+            let timeStrongStrength = mapDeviceToTimeStrongStrength[discoveryInfoString];
+            
+            
+        }
+
+        
+        if timeDiscovered != nil {
+            if timeDiscovered?.timeIntervalSinceNow ?? Double(0) >= Double(10) {
+                print(discoveryInfoString, "Available for more than 10 seconds");
+            } else {
+                print(discoveryInfoString, "Available for less than 10 seconds");
+            }
+            mapDeviceToTimeStrongStrength.removeValue(forKey: discoveryInfoString);
+        }
+    }
+    
+    func getDiscoveryInfo(for peer: PPKPeer) -> String {
+        if let discoveryInfo = peer.discoveryInfo {
+            guard let discoveryInfoString = String(data: discoveryInfo, encoding: .utf8) else { return "" }
+        return discoveryInfoString;
+        }
+        return "";
+    }
+    
+    /**
+            Called when any peer goes out of range
+     */
+    func peerLost(_ peer: PPKPeer) {
+        
     }
 
     func peerDiscovered(_ peer: PPKPeer) {
-        print(peer.proximityStrength, "haha");
-        if let discoveryInfo = peer.discoveryInfo {
-            let discoveryInfoString = String(data: discoveryInfo, encoding: .utf8)
-            print("\(peer.peerID) is here with discovery info: \(discoveryInfoString ?? "test")")
+        let discoveryInfoString = self.getDiscoveryInfo(for: peer);
+        if (discoveryInfoString != "") {
+            print("\(peer.peerID) is here with discovery info: \(discoveryInfoString )")
+            if peer.proximityStrength.rawValue >= PPKProximityStrength.strong.rawValue {
+                
+                mapDeviceToTimeStrongStrength[discoveryInfoString] = Date.init();
+                print(mapDeviceToTimeStrongStrength);
+            }
         }
     }
     
